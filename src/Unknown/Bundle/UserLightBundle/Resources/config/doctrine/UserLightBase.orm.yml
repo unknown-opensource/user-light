@@ -1,0 +1,32 @@
+Unknown\Bundle\UserLightBundle\Entity\UserLightBase:
+    type: mappedSuperclass
+    table: ukn_users
+    repositoryClass: Doctrine\ORM\EntityRepository
+    fields:
+        id:
+            type:     integer
+            id:       true
+            column:   ID
+            generator:
+                strategy: AUTO
+        username:
+            type:     string
+            length:   255
+            unique:   true
+            column:   EMAIL
+        password:
+            type:     string
+            length:   60
+            nullable: false
+            column:   PASSWORD
+            options:
+                fixed:    true
+        salt:
+            type:     string
+            length:   32
+            column:   SALT
+            options:
+                fixed:    true
+        active:
+            type:     boolean
+            column:   IS_ACTIVE

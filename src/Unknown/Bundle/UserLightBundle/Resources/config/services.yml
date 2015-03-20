@@ -1,0 +1,22 @@
+parameters:
+    unknown.user_light_manager.class: Unknown\Bundle\UserLightBundle\Manager\UserManager
+    unknown.user_light_logger.class:  Unknown\Bundle\UserLightBundle\EventListener\LogSuccessfulAuthentication
+
+services:
+    unknown.user_light_manager:
+        class:  %unknown.user_light_manager.class%
+        arguments:
+              - @doctrine.orm.entity_manager
+              - @security.encoder_factory
+              - %unknown_user_light.user_entity_class%
+
+    unknown.user_light_logger:
+        class:  %unknown.user_light_logger.class%
+        arguments:
+              - @request_stack
+              - @doctrine.orm.entity_manager
+              - %unknown_user_light.login_record_class%
+
+        tags:
+            - { name: kernel.event_listener, event: security.authentication.success, method: onSuccess }
+
