@@ -12,7 +12,7 @@ This bundle provides you with:
 - login template
 - login event logger
 
-Issues and feature requests are tracked in the Github [issue tracker]https://github.com/unknown-opensource/user-light/issues.
+Issues and feature requests are tracked in the Github issue tracker https://github.com/unknown-opensource/user-light/issues
 
 Installation
 ======================
@@ -25,6 +25,7 @@ Installation
         "unknown/user-light": "1.0.4"
     }
 
+
 2. Then register the bundle in AppKernel::registerBundles()
 
 
@@ -33,11 +34,13 @@ Installation
         new Unknown\Bundle\ReportBundle\UnknownUserLightBundle(),
     );
 
+
 3. Include security configuration.
 
 
     imports:
         - { resource: @UnknownUserLightBundle/Resources/config/security.yml }
+
 
 
 Custom User Entity
