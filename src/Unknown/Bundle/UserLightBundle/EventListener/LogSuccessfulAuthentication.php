@@ -3,7 +3,6 @@ namespace Unknown\Bundle\UserLightBundle\EventListener;
 
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\HttpFoundation\RequestStack;
-use Symfony\Component\Security\Core\AuthenticationEvents;
 use Symfony\Component\Security\Core\Event\AuthenticationEvent;
 use Unknown\Bundle\UserLightBundle\Entity\LoginRecordInterface;
 
@@ -43,11 +42,4 @@ class LogSuccessfulAuthentication // implements EventSubscriberInterface
         $this->entityManager->persist($loginRecord);
         $this->entityManager->flush($loginRecord);
     }
-
-    /*public static function getSubscribedEvents()
-    {
-        return array(
-            AuthenticationEvents::AUTHENTICATION_SUCCESS => 'onSuccess',
-        );
-    }*/
 }

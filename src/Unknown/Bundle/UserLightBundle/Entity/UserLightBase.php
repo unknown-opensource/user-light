@@ -1,8 +1,6 @@
 <?php
 namespace Unknown\Bundle\UserLightBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
-
 class UserLightBase implements UserLightBaseInterface
 {
     /**

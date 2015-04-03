@@ -1,9 +1,7 @@
 <?php
 namespace Unknown\Bundle\UserLightBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 interface UserLightBaseInterface extends UserInterface
 {

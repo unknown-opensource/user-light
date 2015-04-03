@@ -1,7 +1,6 @@
 {
     "name":                                       "unknown/user-light",
     "type":                                       "library",
-    "version":                                    "1.0.4",
     "description":                                "Light user handling bundle for Symfony2",
     "keywords": [
         "user", "light", "base"
